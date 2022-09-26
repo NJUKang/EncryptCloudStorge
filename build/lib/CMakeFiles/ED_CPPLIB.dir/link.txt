@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -Wall -Wfatal-errors -DNO_IPO=TRUE -shared -Wl,-soname,libED_CPPLIB.so -o libED_CPPLIB.so CMakeFiles/ED_CPPLIB.dir/matrix.cpp.o 

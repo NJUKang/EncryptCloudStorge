@@ -61,7 +61,7 @@ std::string chunkToHash(struct chunk *c)
 {
     char code[41];
     struct mh_sha1_ctx *ctx;
-    ctx = malloc(sizeof(struct mh_sha1_ctx));
+    ctx = (struct mh_sha1_ctx *)malloc(sizeof(struct mh_sha1_ctx));
     mh_sha1_init(ctx);
     mh_sha1_update_avx2(ctx, c->data, c->size);
     mh_sha1_finalize_avx2(ctx, c->fp);
@@ -89,7 +89,7 @@ struct chunk *BNToChunk(mpz_class bn)
     BitVector bv(bn.get_str(2));
     struct chunk *newChunk = new_chunk(0);
     newChunk->size = bv.size();
-    newChunk->data = malloc(sizeof(unsigned char *) * newChunk->size);
+    newChunk->data = (unsigned char*)malloc(sizeof(unsigned char *) * newChunk->size);
     memcpy(newChunk->data, bv.data(), newChunk->size);
     return newChunk;
 }

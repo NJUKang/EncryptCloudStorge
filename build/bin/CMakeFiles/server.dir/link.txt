@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wfatal-errors -DNO_IPO=TRUE CMakeFiles/server.dir/server.cpp.o -o server  -Wl,-rpath,/home/kid/CODE/EncryptCloudStorge/build/lib -lcryptoTools -lpthread ../lib/libED_LIB.so ../lib/libED_CPPLIB.so -lisal_crypto -lglib-2.0 -lssl -lcrypto -lgmp -lgmpxx 
